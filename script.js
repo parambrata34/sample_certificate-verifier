@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Get references to DOM elements
   const verifyForm = document.getElementById('verify-form');
   const identifierInput = document.getElementById('identifier');
   const resultBox = document.getElementById('result');
@@ -9,8 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const contentSections = document.querySelectorAll('.content-section');
   const contactForm = document.getElementById('contact-form');
 
-  // Enhanced Simulated student database for demonstration.
-  // Keys are intentionally in lowercase to match the input's toLowerCase() for robust lookup.
   const studentDatabase = {
     "john@example.com": {
       name: "John Doe",
@@ -36,16 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
       assignments: [true, false, true, false, true, false],
       certificate: null
     },
-    
-
     "nonexistent@email.com": null
   };
 
-  /**
-   * Displays a temporary notification message (toast).
-   * @param {string} msg - The message to display.
-   * @param {string} type - The type of message (e.g., 'success', 'error', 'warning', 'info').
-   */
   function showToast(msg, type = 'info') {
     toast.innerText = msg;
     toast.className = `toast show ${type}`;
@@ -54,18 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 3500);
   }
 
-  /**
-   * Toggles the visibility of the loading spinner.
-   * @param {boolean} show - True to show spinner, false to hide.
-   */
   function showSpinner(show) {
     spinner.classList.toggle('hidden', !show);
   }
 
-  /**
-   * Renders the student's complete information card when found.
-   * @param {object} student - The student data object.
-   */
   function renderStudentCard(student) {
     const allAssignmentsCompleted = student.assignments.every(Boolean);
     const statusText = allAssignmentsCompleted ? 'Completed' : 'In Progress';
@@ -100,11 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
     resultBox.innerHTML = html;
   }
 
-  /**
-   * Renders a card indicating either "student not found" or "certificate not ready".
-   * @param {string} type - 'notFound' for no record, 'noCertificate' for found but no cert.
-   * @param {string} identifierOrName - The searched identifier or student's name/email.
-   */
   function renderNoResultCard(type, identifierOrName) {
     let title = '';
     let message = '';
@@ -133,11 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
     resultBox.innerHTML = html;
   }
 
-  /**
-   * Simulates fetching student data from a backend with a delay.
-   * @param {string} id - The student's email or ID to search for.
-   * @returns {Promise<object|null>} - A promise that resolves with the student data object or null if not found.
-   */
   async function fetchStudentData(id) {
     return new Promise(resolve => {
       setTimeout(() => {
@@ -151,10 +123,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /**
-   * Handles the form submission for student verification.
-   * @param {Event} e - The form submission event object.
-   */
   async function verifyStudent(e) {
     e.preventDefault();
     const identifier = identifierInput.value.trim();
@@ -195,10 +163,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  /**
-   * Handles navigation clicks to show/hide sections.
-   * @param {Event} e - The click event object.
-   */
   function handleNavClick(e) {
     e.preventDefault();
     const targetSectionId = e.target.dataset.section + '-section';
@@ -218,24 +182,15 @@ document.addEventListener('DOMContentLoaded', () => {
     e.target.classList.add('active');
   }
 
-  /**
-   * Handles the contact form submission. (Frontend only)
-   * In a real application, this would send data to a backend.
-   * - The form submission event object.
-   */
   function handleContactSubmit(e) {
     e.preventDefault();
     showToast('✉️ Message sent! We will get back to you soon.', 'success');
     contactForm.reset();
   }
 
-
-  // Event Listeners
   verifyForm.addEventListener('submit', verifyStudent);
-
   navLinks.forEach(link => {
     link.addEventListener('click', handleNavClick);
   });
-
   contactForm.addEventListener('submit', handleContactSubmit);
 });

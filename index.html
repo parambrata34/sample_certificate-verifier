@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VaultofCodes - Certificate Verifier</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header class="brand-header">
+    <div class="brand-info">
+      <img src="" alt="VaultofCodes Logo" class="brand-logo" />
+      <h1 class="brand-title">VaultofCodes</h1>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#" data-section="verifier" class="active"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#" data-section="about-us"><i class="fas fa-info-circle"></i> About</a></li>
+        <li><a href="#" data-section="contact-us"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div id="verifier-section" class="content-section active">
+      <div class="container">
+        <h2 class="text-center">Certificate Verifier</h2>
+        <form id="verify-form">
+          <input id="identifier" type="text" placeholder="Enter Student Email or ID" aria-label="Enter Student Email or ID" required />
+          <button type="submit"><i class="fas fa-search"></i> Verify Certificate</button>
+        </form>
+      </div>
+      <div id="result"></div>
+      <div class="spinner hidden"></div>
+    </div>
+
+    <section id="about-us-section" class="content-section hidden">
+      <div class="card about-card">
+        <h2>About VaultofCodes</h2>
+        <p>Welcome to <strong>VaultofCodes</strong>, your trusted platform for verifying the authenticity of professional development certificates. We believe in transparency and empowering both learners and employers to easily confirm the validity of accomplishments.</p>
+        <p>Our mission is to bridge the gap between education and industry by providing a secure and accessible way to verify credentials. Each certificate issued through VaultofCodes undergoes a rigorous validation process, ensuring that the achievements you see are genuinely earned.</p>
+        <p>Whether you're a student eager to showcase your skills or an employer seeking to verify a candidate's qualifications, VaultofCodes provides a seamless and reliable solution. We are committed to fostering a community of credible learning and professional growth.</p>
+        <p>Thank you for trusting VaultofCodes as your partner in verification!</p>
+      </div>
+    </section>
+
+    <section id="contact-us-section" class="content-section hidden">
+      <div class="card contact-card">
+        <h2>Contact Us</h2>
+        <p class="text-center">Have questions or need support? Reach out to us!</p>
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="contact-name">Your Name:</label>
+            <input type="text" id="contact-name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Your Email:</label>
+            <input type="email" id="contact-email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-subject">Subject:</label>
+            <input type="text" id="contact-subject" name="subject" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Message:</label>
+            <textarea id="contact-message" name="message" rows="6" required></textarea>
+          </div>
+          <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

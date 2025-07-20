@@ -1,13 +1,19 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background: fixed;
 }
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 
 body {
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(to right, #e2eefd, #f9fbfd); 
+  background: linear-gradient(to right, #e2eefd, #f9fbfd);
   color: #2c3e50;
   line-height: 1.6;
   min-height: 100vh;
@@ -15,22 +21,20 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 .brand-header {
   width: 100%;
   max-width: 1350px;
-  display: flex; 
-  align-items: center; 
-  justify-content: space-between; 
-  padding: 20px 30px; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
   background-color: #ffffff;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-  margin-bottom: 35px; 
+  margin-bottom: 35px;
   border-radius: 18px;
 }
 
@@ -52,13 +56,12 @@ body {
   letter-spacing: -0.8px;
 }
 
-
 .main-nav ul {
   list-style: none;
   display: flex;
-  gap: 25px; 
-  margin: 0; 
-  padding: 0; 
+  gap: 25px;
+  margin: 0;
+  padding: 0;
 }
 
 .main-nav ul li a {
@@ -71,7 +74,7 @@ body {
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
-  gap: 8px; 
+  gap: 8px;
 }
 
 .main-nav ul li a:hover,
@@ -86,21 +89,17 @@ body {
   font-size: 19px;
 }
 
-
-
-
 .content-section {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
 }
-
 
 .container {
   width: 100%;
-  max-width: 950px; 
+  max-width: 950px;
   padding: 38px;
   background-color: #ffffff;
   border-radius: 22px;
@@ -121,7 +120,6 @@ body {
   font-size: 26px;
   font-weight: 600;
 }
-
 
 input[type="text"],
 input[type="email"],
@@ -145,10 +143,9 @@ textarea:focus {
 }
 
 textarea {
-    resize: vertical;
-    min-height: 120px;
+  resize: vertical;
+  min-height: 120px;
 }
-
 
 button {
   width: 100%;
@@ -181,7 +178,6 @@ button:active {
   box-shadow: 0 2px 8px rgba(93, 156, 236, 0.2);
 }
 
-
 .card {
   width: 100%;
   max-width: 850px;
@@ -196,13 +192,12 @@ button:active {
 }
 
 .card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
 }
 
-
 .card.student-data {
-    text-align: center;
+  text-align: center;
 }
 
 .card.student-data img {
@@ -262,14 +257,12 @@ button:active {
 }
 
 .card.student-data .no-certificate {
-    color: #f39c12;
-    font-style: italic;
-    font-weight: 500;
-    margin-top: 25px;
-    text-align: center;
+  color: #f39c12;
+  font-style: italic;
+  font-weight: 500;
+  margin-top: 25px;
+  text-align: center;
 }
-
-
 
 .assignment-status {
   display: flex;
@@ -294,7 +287,7 @@ button:active {
 }
 
 .assignment-status span:hover {
-    transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 .assignment-status .completed {
@@ -308,7 +301,6 @@ button:active {
   color: #ffc107;
   border: 1px solid #fff5cc;
 }
-
 
 .card.no-result {
   text-align: center;
@@ -356,49 +348,47 @@ button:active {
   transform: translateY(-2px);
 }
 
-
 .card.about-card,
 .card.contact-card {
-    text-align: left;
-    padding: 45px;
+  text-align: left;
+  padding: 45px;
 }
 
 .card.about-card h2,
 .card.contact-card h2 {
-    font-size: 30px;
-    color: #2c3e50;
-    margin-bottom: 25px;
-    text-align: center;
+  font-size: 30px;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  text-align: center;
 }
 
 .card.about-card p {
-    font-size: 17px;
-    margin-bottom: 15px;
-    color: #444;
+  font-size: 17px;
+  margin-bottom: 15px;
+  color: #444;
 }
 
 .card.about-card p strong {
-    color: #2c3e50;
+  color: #2c3e50;
 }
 
 .card.contact-card .text-center {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 30px;
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
 }
 
 .form-group {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: #333;
-    font-size: 16px;
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+  font-size: 16px;
 }
-
 
 .spinner {
   border: 7px solid #f3f3f3;
@@ -411,9 +401,10 @@ button:active {
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
-
 
 .toast {
   visibility: hidden;
@@ -454,15 +445,12 @@ button:active {
 }
 
 .toast.info {
-    background-color: #5d9cec;
+  background-color: #5d9cec;
 }
-
-
 
 .hidden {
   display: none !important;
 }
-
 
 @keyframes fadeInUp {
   from {
@@ -477,39 +465,30 @@ button:active {
 
 @keyframes bounceIn {
   0%, 20%, 40%, 60%, 80%, 100% {
-    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
   0% {
     opacity: 0;
-    -webkit-transform: scale3d(0.3, 0.3, 0.3);
     transform: scale3d(0.3, 0.3, 0.3);
   }
   20% {
-    -webkit-transform: scale3d(1.1, 1.1, 1.1);
     transform: scale3d(1.1, 1.1, 1.1);
   }
   40% {
-    -webkit-transform: scale3d(0.9, 0.9, 0.9);
     transform: scale3d(0.9, 0.9, 0.9);
   }
   60% {
     opacity: 1;
-    -webkit-transform: scale3d(1.03, 1.03, 1.03);
     transform: scale3d(1.03, 1.03, 1.03);
   }
   80% {
-    -webkit-transform: scale3d(0.97, 0.97, 0.97);
     transform: scale3d(0.97, 0.97, 0.97);
   }
   100% {
     opacity: 1;
-    -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
 }
-
-
 
 @media (max-width: 768px) {
   body {
@@ -517,15 +496,15 @@ button:active {
   }
 
   .brand-header {
-    flex-direction: column; 
+    flex-direction: column;
     gap: 15px;
     padding: 20px;
     margin-bottom: 30px;
   }
 
   .brand-info {
-    justify-content: center; 
-    width: 100%; 
+    justify-content: center;
+    width: 100%;
   }
 
   .brand-logo {
@@ -538,26 +517,28 @@ button:active {
 
   .main-nav {
     width: 100%;
-    box-shadow: none; 
+    box-shadow: none;
     padding: 0;
   }
+
   .main-nav ul {
     gap: 15px;
     justify-content: center;
   }
+
   .main-nav ul li a {
     font-size: 16px;
     padding: 8px 12px;
   }
+
   .main-nav ul li a .fas {
     font-size: 17px;
   }
 
-
   .container {
     padding: 30px;
     margin-bottom: 35px;
-    max-width: 90%;
+    max-width: 60%;
   }
 
   .card {
@@ -627,18 +608,21 @@ button:active {
 
   .card.about-card,
   .card.contact-card {
-      padding: 35px 30px;
+    padding: 35px 30px;
   }
+
   .card.about-card h2,
   .card.contact-card h2 {
-      font-size: 26px;
-      margin-bottom: 20px;
+    font-size: 26px;
+    margin-bottom: 20px;
   }
+
   .card.about-card p {
-      font-size: 16px;
+    font-size: 16px;
   }
+
   .card.contact-card .text-center {
-      font-size: 16px;
+    font-size: 16px;
   }
 }
 
@@ -649,13 +633,17 @@ button:active {
   }
 
   .main-nav ul {
-    flex-direction: column; 
+    flex-direction: row;
     gap: 8px;
     align-items: center;
   }
 
   .container {
     padding: 25px;
+    max-width: 72%;
+  }
+  .container h2 {
+    font-size: 24px;
   }
 
   .card {
@@ -664,10 +652,17 @@ button:active {
 
   input[type="text"],
   input[type="email"],
-  textarea,
+  textarea{
+    max-width: 100%;
+    padding: 10px;
+  }
   button {
     font-size: 15px;
-    padding: 14px;
+    padding: 10px;
+  }
+
+  .card.student-data {
+    max-width: 83%;
   }
 
   .card.student-data h3 {
@@ -679,7 +674,11 @@ button:active {
   }
 
   .card.no-result .icon-large {
-    font-size: 45px;
+    font-size: 40px;
+  }
+
+  .card.no-result {
+    max-width: 72%;
   }
 
   .card.no-result h3 {
@@ -690,12 +689,26 @@ button:active {
     font-size: 14px;
   }
 
-  .card.about-card,
-  .card.contact-card {
-      padding: 30px 20px;
+  .toast {
+    max-width: 70%;
+    padding: 15px;
+    font-size: 15px;
+    justify-content: center;
+
   }
-  .card.about-card h2,
+
+  .card.about-card {
+    max-width: 100%;
+  }
+  .card.contact-card {
+    padding: 30px 20px;
+    max-width: 75%;
+  }
+
+  .card.about-card h2 {
+    font-size: 24px;
+  }
   .card.contact-card h2 {
-      font-size: 24px;
+    font-size: 24px;
   }
 }
